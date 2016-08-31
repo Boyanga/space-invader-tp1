@@ -12,6 +12,7 @@ class MenuState extends FlxState
 	override public function create():Void
 	{
 		super.create();
+		Reg.highscore = 100;
 	}
 
 	override public function update(elapsed:Float):Void
