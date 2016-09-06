@@ -13,11 +13,6 @@ class MenuState extends FlxState
 	{
 		super.create();
 		Reg.highscore = 100;
-		cuadrado.x = 100;
-		cuadrado.y = 100;
-		cuadrado.loadGraphic(AssetPaths.Protagonista__png);
-		cuadrado.alpha = 1; 
-		add(cuadrado);
 	}
 
 	override public function update(elapsed:Float):Void
