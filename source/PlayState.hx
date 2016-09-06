@@ -22,6 +22,6 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
-		personaje.direccion();
+		personaje.acciones();
 	}
 }

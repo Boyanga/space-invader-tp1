@@ -2,6 +2,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.system.FlxAssets.FlxGraphicAsset;
+import sprites.Balas;
 
 /**
  * ...
@@ -23,9 +24,8 @@ class Personaje extends FlxSprite
 	{
 		super(X, Y, SimpleGraphic);
 		loadGraphic("assets/images/Protagonista.png");
-		
 	}
-	public function direccion()
+	public function acciones()
 	{
 		if (FlxG.keys.pressed.RIGHT && x < FlxG.width - width)
 		{		
@@ -34,6 +34,13 @@ class Personaje extends FlxSprite
 		if (FlxG.keys.pressed.LEFT && x > 0)
 		{
 			movizq();
+		}
+		if (FlxG.keys.justPressed.SPACE)
+		{
+			var b:Balas = new Balas();
+			b.x = x + width / 2;
+			b.y = y;
+			FlxG.state.add(b);
 		}
 	}
 	
