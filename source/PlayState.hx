@@ -9,13 +9,17 @@ import flixel.math.FlxMath;
 
 class PlayState extends FlxState
 {
+	private var personaje:Personaje;
 	override public function create():Void
 	{
 		super.create();
+		personaje = new Personaje();
+		add(personaje);
 	}
 
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
+		personaje.direccion();
 	}
 }
