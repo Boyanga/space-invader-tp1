@@ -15,6 +15,8 @@ class PlayState extends FlxState
 		super.create();
 		personaje = new Personaje();
 		add(personaje);
+		personaje.y = FlxG.height - personaje.height;
+		personaje.x = FlxG.width / 2 - personaje.width / 2;
 	}
 
 	override public function update(elapsed:Float):Void

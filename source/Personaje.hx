@@ -9,13 +9,15 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
  */
 class Personaje extends FlxSprite
 {
-public function movder()
+	private var velocidadJugador = 4;
+	
+	public function movder()
 	{
-		x += 5;
+		x += velocidadJugador;
 	}
 	public function movizq()
 	{
-		x -=5;
+		x -= velocidadJugador;
 	}
 	public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset) 
 	{
@@ -25,11 +27,11 @@ public function movder()
 	}
 	public function direccion()
 	{
-		if (FlxG.keys.pressed.RIGHT)
+		if (FlxG.keys.pressed.RIGHT && x < FlxG.width - width)
 		{		
 			movder();
 		}
-		if (FlxG.keys.pressed.LEFT)
+		if (FlxG.keys.pressed.LEFT && x > 0)
 		{
 			movizq();
 		}
